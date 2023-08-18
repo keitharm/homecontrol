@@ -1,0 +1,13 @@
+services:
+  homecontrol:
+    image: ghcr.io/keitharm/homecontrol:latest
+    container_name: "homecontrol"
+    restart: unless-stopped
+    init: true
+    environment:
+      PORT: 3000
+      SECRET: CHANGE_ME_1337
+      EMAIL: 
+      PASSWORD: 
+    ports:
+      - 3000:3000
